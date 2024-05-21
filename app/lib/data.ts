@@ -118,7 +118,7 @@ export async function fetchFilteredInvoices(
 
     return invoices.rows;
   } catch (error) {
-    console.error('Database Error:', error);
+    console.error('Database Error:', error, query, currentPage);
     throw new Error('Failed to fetch invoices.');
   }
 }
